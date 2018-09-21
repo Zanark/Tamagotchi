@@ -1,4 +1,4 @@
 # Tamagotchi
 A self learning tamagotchi who is gonna annoy you when you are busy. However it's gonna die if you ignore it.
 
-![Tamagotchi](tamagotchi/public/images/p_b_i.png)
+![Tamagotchi](tamagotchi/public/images/pikachu.png)

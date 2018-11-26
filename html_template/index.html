@@ -90,15 +90,6 @@
     </div>
 
 
-        <!-- Settings viewer -->
-        <div id="settings-viewer" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <br />
-                <button>Logout</button>
-            </div>      
-        </div>
-
         <!-- food viewer -->
         <div id="food-viewer" class="modal">
             <div class="modal-content">
@@ -142,6 +133,29 @@
             </div>      
         </div>
 
+        <!-- info viewer -->
+        <div id="info-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>About Tamagotchi</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-12">Visit <a href="https://github.com/Zanark/Tamagotchi" target="_blank">Tamagotchi</a> for more details.</div>
+                </div>
+                <br />
+                <center><small>Made with <i class="fas fa-heart" style="color:red;"></i> by <a href="https://github.com/Zanark" target="_blank">Debashish Mishra</a> and <a href="https://github.com/salif-04" target="_blank"> Syed Salif Moin</a>.</small></center>
+            </div>      
+        </div>
+
+        <!-- Settings viewer -->
+        <div id="settings-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <br />
+                <button>Logout</button>
+            </div>      
+        </div>
+
         <!-- script -->
         <script>
             // food
@@ -164,6 +178,13 @@
             });
             $(".close").click(function(){
                 $("#store-viewer").css("display","none");
+            });
+            // info
+            $("#info").click(function() {
+                $("#info-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#info-viewer").css("display","none");
             });
             // settings
             $("#settings").click(function() {

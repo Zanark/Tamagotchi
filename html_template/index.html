@@ -100,38 +100,79 @@
         </div>
 
         <!-- food viewer -->
+        <div id="food-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Food</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-4">Pizza</div><div class="col-xs-4"><i class="material-icons">local_pizza</i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Cookies</div><div class="col-xs-4"><i class="fas fa-cookie"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Milk</div><div class="col-xs-4"><i class="fas fa-cookie"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    </div>
+            </div>      
+        </div>
+
+        <!-- first-aid viewer -->
+        <div id="first-aid-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>First Aid</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-4">Capsule</div><div class="col-xs-4"><i class="fas fa-capsules"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Health Kit</div><div class="col-xs-4"><i class="fas fa-syringe"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Apply</button></div>
+                </div>
+            </div>      
+        </div>
+
+        <!-- store viewer -->
         <div id="store-viewer" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <h2><b>Store</b></h2>
                 <br />
-                <!-- <button>Logout</button> -->
                 <div class="row">
                     <div class="col-xs-4">Pizza</div><div class="col-xs-4"><button class="btn">- </button><i class="material-icons">local_pizza</i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
                     <div class="col-xs-4">Cookies</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
                     <div class="col-xs-4">Milk</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Capsule</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-capsules"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Health Kit</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-syringe"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
                 </div>
             </div>      
         </div>
 
         <!-- script -->
         <script>
-            // settings
-            $("#settings").click(function() {
-                $("#settings-viewer").css("display","block");
+            // food
+            $("#food").click(function() {
+                $("#food-viewer").css("display","block");
             });
-
             $(".close").click(function(){
-                $("#settings-viewer").css("display","none");
+                $("#food-viewer").css("display","none");
+            });
+            // health
+            $("#first-aid").click(function() {
+                $("#first-aid-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#first-aid-viewer").css("display","none");
             });
             // store
             $("#store").click(function() {
                 $("#store-viewer").css("display","block");
             });
-
             $(".close").click(function(){
                 $("#store-viewer").css("display","none");
             });
-
+            // settings
+            $("#settings").click(function() {
+                $("#settings-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#settings-viewer").css("display","none");
+            });
+            
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";

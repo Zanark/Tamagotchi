@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css">
+        {{-- <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"> --}}
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,15 +21,15 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
-        {{-- <style>
-            /* html, body {
+        <style>
+            html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-            } */
+            }
 
             .full-height {
                 height: 100vh;
@@ -72,7 +72,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style> --}}
+        </style>
 
 
     </head>
@@ -80,17 +80,23 @@
     {{-- BODY STARTS HERE-------------------------------------------------------------------- --}}
 
     <body>
+
+        {{-- NAVBAR START HERE --}}
+
         <div class="navbar nav invert">            
 
             <nav class="navbar navbar-inverse">
+
                 <div class="container-fluid">
+
                   <div class="navbar-header">
-                  <a class="navbar-brand" href="#">{{ env('APP_NAME')}}</a>
+                  <a class="navbar-brand" href="{{ url('/') }}">{{ env('APP_NAME')}}</a>
                   </div>
+                  
                   @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/dashboard') }}">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -101,59 +107,87 @@
                 </div>
                     @endif
                 </div>
+
             </nav>
+        </div>
 
-            <!-- CONTENT OF BODY STARTS HERE -->
+            {{-- NAVBAR ENDS HERE --}}
 
-            <div id="header">
-                <div>
-                    <div>
-                        <a href="index.html" id="logo"><img src="{{ asset('sprites/cat.png') }}" alt="Image"></a>
-                    </div>
+            {{-- HEADER STARTS HERE  --}}
+
+            <div id="header" class="row">
+
+                <div class="col-lg-3">
+                        <div>
+                                <a href="{{ url('/') }}" id="logo"><img class="img img-responsive" src="{{ asset('sprites/logo.png') }}" alt="Image" id = "logo"></a>
+                        </div>
                 </div>
-                <ul>
-                    <li class="current">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="news.html">News</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">Gallery</a>
-                    </li>
-                </ul>
+                
+                <div class="col-lg-6">
+
+                        <ul>
+                                <li class="current">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="news.html">News</a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                        </ul>
+
+                        <div id="home">
+
+                                <div class="aside">
+                                    <h1>Welcome to Tamagotchi!</h1>
+                                    <p>
+                                        Create a virtual pet and take care of it's needs. Don not let it die.
+                                    </p>
+                                    <p>
+                                        For more info about what a Tamagotchi is, plz read this <a href="https://en.wikipedia.org/wiki/Tamagotchi">Wikipedia article </a>. 
+                                    </p>
+                                </div>
+        
+                        </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                        <div class="sidebar">
+                                <div>
+                                    <h2>Follow us on</h2>
+                                    <a href="https://github.com/Zanark/Tamagotchi" id="github" target="_blank">GitHub</a>
+                                </div>
+                        </div>
+
+                </div>                
+               
             </div>
 
+            {{-- HEADER ENDS HERE --}}
+
+            {{-- BODY STARTS HERE --}}
             
             <div id="body">
                 <div>
-                    <div id="home">
-                        <div class="aside">
-                            <h1>This website template is FREE!!!</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada turpis quis ligula feugiat volutpat hendrerit eros condimentum. Integer non orci quis odio bibendum euismod ac nec orci. Vestibulum cursus fringilla dui, sed pharetra odio gravida vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pellentesque porta porttitor. Pellentesque pretium eros magna, ut vulputate magna. In non metus quis orci rutrum elementum sed ac mi. Vestibulum tristique egestas nisl a pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a lectus augue. Vivamus dignissim lobortis venenatis.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada turpis quis ligula feugiat volutpat hendrerit eros condimentum. Integer non orci quis odio bibendum euismod ac nec orci. Vestibulum cursus fringilla dui, sed pharetra odio gravida vitae. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pellentesque porta porttitor. Pellentesque pretium eros magna, ut vulputate magna. In non metus quis orci rutrum elementum sed ac mi. Vestibulum tristique egestas nisl a pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a lectus augue. Vivamus dignissim lobortis venenatis.
-                            </p>
-                            <a href="index.html" class="readmore">Read more...</a>
-                        </div>
-                        <div class="sidebar">
-                            <div>
-                                <h2>Connect</h2>
-                                <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter" target="_blank">Twitter</a>
-                                <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook" target="_blank">Facebook</a>
-                                <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus" target="_blank">Google&#43;</a>
-                            </div>
-                            <img id="iphone" src="images/iphone-bwastoff.jpg" alt="Image">
-                        </div>
-                    </div>
+
+{{--                   THINGS TO ADD HERE
+                        - ABOUT US
+                        - NEWS
+                        - GALLERY
+
+                    FOR SCREENSHOTS BUT LATER
+                        
                     <div class="section">
+
                         <div>
                             <h2>Gallery</h2>
+
                             <div>
                                 <ul class="gallery">
                                     <li>
@@ -194,18 +228,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                    
+--}}
+
                 </div>
             </div>
-
-
-            <div class="content">
-                <div class="title m-b-md">
-                    {{env('APP_NAME')}}
-                </div>
-
-                
-            </div>
-        </div>
     </body>
 </html>

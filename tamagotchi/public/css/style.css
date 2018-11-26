@@ -668,3 +668,8 @@ p a:hover {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+img#logo {
+	height: 20px;
+	width: 20px;
+}

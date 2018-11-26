@@ -117,6 +117,31 @@
             </div>      
         </div>
 
+        <!-- bath viewer -->
+        <div id="bath-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Personal Cleanliness</b></h2>
+                <br />
+                <div class="row">
+                        <div><button>Bath</button></div>
+                        <div><button>Sweep</button></div>
+                </div>
+            </div>      
+        </div>
+
+        <!-- play viewer -->
+        <div id="play-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Play</b></h2>
+                <br />
+                <div class="row">
+
+                </div>
+            </div>      
+        </div>
+        
         <!-- store viewer -->
         <div id="store-viewer" class="modal">
             <div class="modal-content">
@@ -151,6 +176,7 @@
         <div id="settings-viewer" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <h2><b>Settings</b></h2>
                 <br />
                 <button>Logout</button>
             </div>      
@@ -164,6 +190,24 @@
             });
             $(".close").click(function(){
                 $("#food-viewer").css("display","none");
+            });
+            // bath
+            $("#bath").click(function() {
+                $("#bath-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#bath-viewer").css("display","none");
+            });
+            // play
+            $("#play").click(function() {
+                $("#play-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#play-viewer").css("display","none");
+            });
+            // sleep
+            $("#sleep").click(function() {
+                
             });
             // health
             $("#first-aid").click(function() {

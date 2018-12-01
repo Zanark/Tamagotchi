@@ -69,7 +69,7 @@
             <div class="col-xs-12">
                 <center>
                     <div>
-                        <img src="assets/sprites/Idle (1).png" class="img-fluid rounded">
+                        <img id="avatar" src="assets/gifs/dog/Idle.gif" class="img-fluid rounded">
                     </div>
                 </center>
             </div>
@@ -243,6 +243,31 @@
                     modal.style.display = "none";
                 }
             }
+
+            // avatar animation
+            window.setInterval(function() {
+                var avtr = Math.floor((Math.random() * 4) + 1);
+                if (avtr === 1) {
+                    for(var i=0;i<3;i++)
+                    {
+                        setTimeout(function(){
+                            $("#avatar").attr('src','assets/gifs/dog/Jump.gif');
+                        }, i*3000);
+                    }
+                }
+                else if (avtr === 2) {
+                    $("#avatar").attr('src','assets/gifs/dog/Run.gif');
+                }
+                else if (avtr === 3) {
+                    $("#avatar").attr('src','assets/gifs/dog/Run-Jump.gif');
+                }
+                else {
+                    $("#avatar").attr('src','assets/gifs/dog/Walk.gif');
+                }
+                setTimeout(function() {
+                    $("#avatar").attr('src','assets/gifs/dog/Idle.gif');
+                }, 10000);
+            }, 20000);
         </script>
 </body>
 </html>

@@ -69,7 +69,7 @@
             <div class="col-xs-12">
                 <center>
                     <div>
-                        <img src="assets/sprites/Idle (1).png" class="img-fluid rounded">
+                        <img id="avatar" src="assets/gifs/dog/Idle.gif" class="img-fluid rounded">
                     </div>
                 </center>
             </div>
@@ -90,53 +90,184 @@
     </div>
 
 
+        <!-- food viewer -->
+        <div id="food-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Food</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-4">Pizza</div><div class="col-xs-4"><i class="material-icons">local_pizza</i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Cookies</div><div class="col-xs-4"><i class="fas fa-cookie"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Milk</div><div class="col-xs-4"><i class="fas fa-cookie"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    </div>
+            </div>      
+        </div>
+
+        <!-- first-aid viewer -->
+        <div id="first-aid-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>First Aid</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-4">Capsule</div><div class="col-xs-4"><i class="fas fa-capsules"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Feed</button></div>
+                    <div class="col-xs-4">Health Kit</div><div class="col-xs-4"><i class="fas fa-syringe"></i><b>X</b><b>4</b></div><div class="col-xs-4"><button class="btn btn-primary">Apply</button></div>
+                </div>
+            </div>      
+        </div>
+
+        <!-- bath viewer -->
+        <div id="bath-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Personal Cleanliness</b></h2>
+                <br />
+                <div class="row">
+                        <div><button>Bath</button></div>
+                        <div><button>Sweep</button></div>
+                </div>
+            </div>      
+        </div>
+
+        <!-- play viewer -->
+        <div id="play-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Play</b></h2>
+                <br />
+                <div class="row">
+
+                </div>
+            </div>      
+        </div>
+        
+        <!-- store viewer -->
+        <div id="store-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>Store</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-4">Pizza</div><div class="col-xs-4"><button class="btn">- </button><i class="material-icons">local_pizza</i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Cookies</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Milk</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Capsule</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-capsules"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                    <div class="col-xs-4">Health Kit</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-syringe"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
+                </div>
+            </div>      
+        </div>
+
+        <!-- info viewer -->
+        <div id="info-viewer" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2><b>About Tamagotchi</b></h2>
+                <br />
+                <div class="row">
+                    <div class="col-xs-12">Visit <a href="https://github.com/Zanark/Tamagotchi" target="_blank">Tamagotchi</a> for more details.</div>
+                </div>
+                <br />
+                <center><small>Made with <i class="fas fa-heart" style="color:red;"></i> by <a href="https://github.com/Zanark" target="_blank">Debashish Mishra</a> and <a href="https://github.com/salif-04" target="_blank"> Syed Salif Moin</a>.</small></center>
+            </div>      
+        </div>
+
         <!-- Settings viewer -->
         <div id="settings-viewer" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <h2><b>Settings</b></h2>
                 <br />
                 <button>Logout</button>
             </div>      
         </div>
 
-        <!-- food viewer -->
-        <div id="store-viewer" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <br />
-                <!-- <button>Logout</button> -->
-                <div class="row">
-                    <div class="col-xs-4">Pizza</div><div class="col-xs-4"><button class="btn">- </button><i class="material-icons">local_pizza</i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
-                    <div class="col-xs-4">Cookies</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
-                    <div class="col-xs-4">Milk</div><div class="col-xs-4"><button class="btn">- </button><i class="fas fa-cookie"></i><b>X</b><b>4</b><button class="btn"> +</button></div><div class="col-xs-4"><button class="btn btn-primary">Buy</button></div>
-                </div>
-            </div>      
-        </div>
-
         <!-- script -->
         <script>
-            // settings
-            $("#settings").click(function() {
-                $("#settings-viewer").css("display","block");
+            // food
+            $("#food").click(function() {
+                $("#food-viewer").css("display","block");
             });
-
             $(".close").click(function(){
-                $("#settings-viewer").css("display","none");
+                $("#food-viewer").css("display","none");
+            });
+            // bath
+            $("#bath").click(function() {
+                $("#bath-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#bath-viewer").css("display","none");
+            });
+            // play
+            $("#play").click(function() {
+                $("#play-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#play-viewer").css("display","none");
+            });
+            // sleep
+            $("#sleep").click(function() {
+                
+            });
+            // health
+            $("#first-aid").click(function() {
+                $("#first-aid-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#first-aid-viewer").css("display","none");
             });
             // store
             $("#store").click(function() {
                 $("#store-viewer").css("display","block");
             });
-
             $(".close").click(function(){
                 $("#store-viewer").css("display","none");
             });
-
+            // info
+            $("#info").click(function() {
+                $("#info-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#info-viewer").css("display","none");
+            });
+            // settings
+            $("#settings").click(function() {
+                $("#settings-viewer").css("display","block");
+            });
+            $(".close").click(function(){
+                $("#settings-viewer").css("display","none");
+            });
+            
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
             }
+
+            // avatar animation
+            window.setInterval(function() {
+                var avtr = Math.floor((Math.random() * 4) + 1);
+                if (avtr === 1) {
+                    for(var i=0;i<3;i++)
+                    {
+                        setTimeout(function(){
+                            $("#avatar").attr('src','assets/gifs/dog/Jump.gif');
+                        }, i*3000);
+                    }
+                }
+                else if (avtr === 2) {
+                    $("#avatar").attr('src','assets/gifs/dog/Run.gif');
+                }
+                else if (avtr === 3) {
+                    $("#avatar").attr('src','assets/gifs/dog/Run-Jump.gif');
+                }
+                else {
+                    $("#avatar").attr('src','assets/gifs/dog/Walk.gif');
+                }
+                setTimeout(function() {
+                    $("#avatar").attr('src','assets/gifs/dog/Idle.gif');
+                }, 10000);
+            }, 20000);
         </script>
 </body>
 </html>

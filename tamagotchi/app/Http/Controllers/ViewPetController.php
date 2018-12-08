@@ -10,4 +10,20 @@ class ViewPetController extends Controller
     {
         return view('view-pet');
     }
+
+    public function pet_stats()
+    {
+        //
+    }
+
+    public function pet_play()
+    {
+        //
+    }
+
+    public function pet_feed()
+    {
+        //
+    }
+
 }
